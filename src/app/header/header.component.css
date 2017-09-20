@@ -1,0 +1,30 @@
+.header {
+
+  height: 80px;
+  border-bottom: 1px solid black;
+}
+
+.logo-img {
+  height: 60px;
+}
+
+.logo {
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.logo:hover {
+  cursor: pointer;
+  color: #dddddd
+}
+
+.link {
+  margin: 0 10px;
+  font-size: 15px;
+
+}
+
+.link:hover {
+  cursor:pointer;
+  color: #dddddd
+}

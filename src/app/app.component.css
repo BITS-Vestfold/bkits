@@ -1,25 +1,6 @@
-.logo {
-  margin: 0 10px;
-  font-size: 25px;
-}
-
-.logo:hover {
-  cursor: pointer;
-  color: #dddddd
-}
-
-.link {
-  margin: 0 10px;
-  font-size: 15px;
-
-}
-
-.link:hover {
-  cursor:pointer;
-  color: #dddddd
-}
 
 .container {
+  padding-top: 20px;
   margin-top: 20px;
   width: 100%;
   height: 100%;
