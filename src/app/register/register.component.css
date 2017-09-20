@@ -1,0 +1,44 @@
+
+.input-container {
+  padding: 20px;
+}
+
+.input {
+  border: 2px solid transparent;
+  border-bottom-color: black;
+  padding: 5px;
+  outline: none;
+  -webkit-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+.input:focus {
+  border: 2px solid black;
+}
+
+.label {
+
+}
+
+form {
+  padding: 20px 50px;
+  border: 2px solid black;
+}
+
+
+.submit-btn {
+  padding: 10px;
+  border: 2px solid black;
+  background: white;
+  -webkit-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  border: 2px solid white;
+  background: black;
+  color: white;
+}

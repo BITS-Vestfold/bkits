@@ -1,7 +1,7 @@
 .header {
 
   height: 80px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .logo-img {
@@ -21,7 +21,7 @@
 .link {
   margin: 0 10px;
   font-size: 15px;
-
+  outline: none;
 }
 
 .link:hover {
