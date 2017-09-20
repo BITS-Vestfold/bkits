@@ -9,12 +9,14 @@ import { MainComponent } from './main/main.component';
 import { AppRoutingModule} from "./app-routing.module";
 import { RouterModule} from "@angular/router";
 import { EventsComponent } from './events/events.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     EventsComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
