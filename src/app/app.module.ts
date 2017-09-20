@@ -8,11 +8,13 @@ import { FlexLayoutModule} from '@angular/flex-layout';
 import { MainComponent } from './main/main.component';
 import { AppRoutingModule} from "./app-routing.module";
 import { RouterModule} from "@angular/router";
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
+    EventsComponent,
   ],
   imports: [
     BrowserModule,
