@@ -1,0 +1,12 @@
+.main-content {
+  width: 100%;
+  height: 83vh;
+  border-right: solid 1px black;
+  position: relative;
+  background: url("http://cdn.wallpapersafari.com/57/10/IvgkyS.jpg") no-repeat 50%;
+  background-size: cover;
+}
+
+.facebook-container {
+  padding-left: 20px;
+}
