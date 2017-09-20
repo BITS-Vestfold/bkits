@@ -1,4 +1,4 @@
-<div class="container" fxLayoutAlign="center start" fxLayout="column">
+<div class="container" fxLayoutAlign="center center" fxLayout="column">
   <div class="main-content" fxLayoutAlign="center center">
 
     <div class="logo">
@@ -10,11 +10,19 @@
     </div>
   </div>
 
-  <div class="secondary-content" fxLayout="row">
-    <div class="sponsors" fxFlex="1 1 100%">
+  <div class="secondary-content" fxLayout="row" fxLayoutAlign="center center">
+    <div class="sponsors" fxLayout="column" fxLayoutAlign="start center">
 
+      <div class="sponsor-header"><h1>Våre stolte sponsorer!</h1></div>
+      <div class="sponsor-logos"  fxLayoutAlign="center center" fxLayoutWrap>
+        <div *ngFor="let sponsor of sponsorImgs" class="sponsor" fxLayoutAlign="center center">
+
+          <img src="{{sponsor.imgSrc}}" alt="{{sponsor.name}}">
+
+        </div>
+      </div>
     </div>
-    <div class="facebook-container" fxFlex="1 1 100%">
+    <div class="facebook-container" fxFlex="3 3 100%">
       <fb-page
         href="https://www.facebook.com/itstudenter"
         [height]="500"
