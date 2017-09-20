@@ -1,15 +1,19 @@
-<div class="container" fxLayoutAlign="center start">
-  <div class="main-content" fxFlex="1 1 100%">
+<div class="container" fxLayoutAlign="center start" fxLayout="column">
+  <div class="main-content" fxFlex="1 1 100%"></div>
 
-  </div>
-  <div class="facebook-container" fxFlex="3 3 100%">
-    <fb-page
-      href="https://www.facebook.com/itstudenter"
-      [height]="500"
-      [width]="300"
-      [smallHeader]="true"
-      tabs="timeline">
-    </fb-page>
+  <div class="secondary-content" fxLayout="row">
+    <div class="sponsors" fxFlex="1 1 100%">
+
+    </div>
+    <div class="facebook-container" fxFlex="1 1 100%">
+      <fb-page
+        href="https://www.facebook.com/itstudenter"
+        [height]="500"
+        [width]="300"
+        [smallHeader]="true"
+        tabs="timeline">
+      </fb-page>
+    </div>
   </div>
 
 </div>
