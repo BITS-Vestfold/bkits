@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { AgmCoreModule } from '@agm/core';
 import {ContactComponent} from "./contact/contact.component";
 import { HeaderComponent } from './header/header.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,8 @@ import { HeaderComponent } from './header/header.component';
     FacebookModule.forRoot(),
     BrowserAnimationsModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
