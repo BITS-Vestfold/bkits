@@ -10,7 +10,8 @@ const appRoutes: Routes = [
   {path: 'events', component: EventsComponent },
   {path: 'bli-medlem', component: RegisterComponent },
   {path: 'kontakt', component: ContactComponent },
-  {path: '', component: MainComponent},
+  {path: '', redirectTo: '/main', pathMatch: 'full'},
+  {path: 'main', component: MainComponent},
 ];
 
 @NgModule({
