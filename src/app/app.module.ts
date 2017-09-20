@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { AgmCoreModule } from '@agm/core';
 import {ContactComponent} from "./contact/contact.component";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {ContactComponent} from "./contact/contact.component";
     MainComponent,
     EventsComponent,
     RegisterComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
