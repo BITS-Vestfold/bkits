@@ -16,6 +16,7 @@ import {ContactComponent} from "./contact/contact.component";
 import { HeaderComponent } from './header/header.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AboutUsComponent } from './about-us/about-us.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     RegisterComponent,
     ContactComponent,
     HeaderComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

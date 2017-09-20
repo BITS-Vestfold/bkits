@@ -12,6 +12,8 @@
   margin: 0 20px;
   font-size: 25px;
   height: 60px;
+
+  outline: none !important;
 }
 
 .logo:hover {
