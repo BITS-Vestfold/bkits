@@ -1,0 +1,54 @@
+.card {
+  padding: 50px;
+  background-color: white;
+}
+
+.contact-container {
+  padding: 10px;
+}
+
+.contact-item {
+  padding: 10px;
+}
+
+.contact-img {
+  width: 100px;
+  -webkit-border-radius: 600px;
+  border-radius: 600px
+}
+
+.desc {
+  font-size: 14px !important;
+  font-style: italic;
+  margin-top: -10px;
+  color: #818181;
+}
+
+.name {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.list-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.list-item md-icon, a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+agm-map {
+  height: 400px;
+}
