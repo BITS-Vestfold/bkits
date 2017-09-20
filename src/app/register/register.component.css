@@ -1,4 +1,8 @@
 
+.container {
+  padding-top: 20px;
+
+}
 .input-container {
   padding: 20px;
 }
@@ -8,9 +12,9 @@
   border-bottom-color: black;
   padding: 5px;
   outline: none;
-  -webkit-transition: all ease 1s;
-  -o-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
 }
 
 .input:focus {
@@ -25,8 +29,19 @@
 form {
   padding: 20px 50px;
   border: 2px solid black;
+  -webkit-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
 
+.rotate {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
 
 .submit-btn {
   padding: 10px;
