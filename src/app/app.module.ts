@@ -5,10 +5,14 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MdToolbarModule} from '@angular/material';
 import { FacebookModule, FacebookService} from 'ngx-facebook';
 import { FlexLayoutModule} from '@angular/flex-layout';
+import { MainComponent } from './main/main.component';
+import { AppRoutingModule} from "./app-routing.module";
+import { RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -16,7 +20,9 @@ import { FlexLayoutModule} from '@angular/flex-layout';
     FlexLayoutModule,
     FacebookModule.forRoot(),
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [FacebookService],
   bootstrap: [AppComponent]
