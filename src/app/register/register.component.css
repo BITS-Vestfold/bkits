@@ -15,6 +15,7 @@
 
 .input:focus {
   border: 2px solid black;
+  padding: 5px;
 }
 
 .label {
@@ -38,7 +39,7 @@ form {
 
 .submit-btn:hover {
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid black;
   background: black;
   color: white;
 }
