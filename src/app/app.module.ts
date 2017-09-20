@@ -15,6 +15,7 @@ import { AgmCoreModule } from '@agm/core';
 import {ContactComponent} from "./contact/contact.component";
 import { HeaderComponent } from './header/header.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     EventsComponent,
     RegisterComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

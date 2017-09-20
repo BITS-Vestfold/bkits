@@ -1,6 +1,6 @@
 <div fxLayoutAlign="center center" fxLayout="column" class="container">
 
-  <form class="form" [formGroup]="registerForm">
+  <form class="form" [formGroup]="registerForm" [ngClass]="{'rotate': onClick}">
     <h1>BLI MEDLEM</h1>
     <div class="input-container" fxLayoutAlign="center center" fxLayout="column">
       <label class="label" for="firstname">Fornavn</label>
@@ -23,7 +23,7 @@
     </div>
 
     <div fxLayoutAlign="center center">
-      <button class="submit-btn">REGISTRER</button>
+      <button class="submit-btn" (click)="onClick = !onClick">REGISTRER</button>
     </div>
   </form>
 
