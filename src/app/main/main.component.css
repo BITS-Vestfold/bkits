@@ -6,6 +6,22 @@
   background-size: cover;
 }
 
+.logo-img {
+  height: 200px;
+}
+
+.logo {
+  top: 100px;
+  position: absolute;
+  font-size: 25px;
+}
+
+.bits {
+  position: absolute;
+  background: rgba(255,255,255, 0);
+  width: 80%;
+}
+
 .facebook-container {
   padding-left: 20px;
 }
