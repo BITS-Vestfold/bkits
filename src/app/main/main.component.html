@@ -1,9 +1,19 @@
-<div fxLayoutAlign="center center">
-  <fb-page
-    href="https://www.facebook.com/itstudenter"
-    [height]="700"
-    [width]="500"
-    [smallHeader]="true"
-    tabs="timeline">
-  </fb-page>
+<div class="container" fxLayoutAlign="center start" fxLayout="column">
+  <div class="main-content" fxFlex="1 1 100%"></div>
+
+  <div class="secondary-content" fxLayout="row">
+    <div class="sponsors" fxFlex="1 1 100%">
+
+    </div>
+    <div class="facebook-container" fxFlex="1 1 100%">
+      <fb-page
+        href="https://www.facebook.com/itstudenter"
+        [height]="500"
+        [width]="300"
+        [smallHeader]="true"
+        tabs="timeline">
+      </fb-page>
+    </div>
+  </div>
+
 </div>
