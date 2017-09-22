@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);;
+}
+
+.leaders {
+  width: 100%;
+
+  img {
+    width: 100px;
+    -webkit-border-radius: 600px;
+    border-radius: 600px
+  }
+}
+
+.name {
+  h4 {
+    margin: 0 0 5px 0;
+  }
+}
+
+.title {
+  font-weight: 100;
+}
+
+.contact-info {
+  margin-top: 15px;
+
+  .phone {
+    margin-top: 5px;
+  }
+}
+
+.members {
+  width: 100%;
+
+  .member {
+    padding: 5px;
+  }
+}

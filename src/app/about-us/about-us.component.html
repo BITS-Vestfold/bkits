@@ -1,4 +1,35 @@
-<div class="container">
+<div class="container" fxLayoutAlign="center center">
 
+  <div class="leaders" fxLayout="column" fxLayoutAlign="center end">
+    <div fxLayoutAlign="center center" fxLayout="column">
+      <div><img src="https://i1.sndcdn.com/avatars-000025149788-mf8o5m-t500x500.jpg" alt="Trump the hump" class="contact-img"></div>
+      <div class="name"><h4>Petter Duuuus Berven</h4></div>
+      <div class="title">Styrets leder</div>
+      <div class="contact-info" fxLayoutAlign="center start" fxLayout="column">
+        <div class="mail">Mail: leder@bkits.no</div>
+        <div class="phone">Telefon: 123 45 678</div>
+      </div>
+    </div>
+  </div>
 
+  <div class="members" fxLayoutAlign="center center" fxLayout="column">
+    <div><h3>Styrets øvrige medlemmer:</h3></div>
+    <div *ngFor="let member of members" class="member">
+      {{member.name}}, født {{member.dateOfBirth}}
+    </div>
+  </div>
+
+  <div class="leaders" fxLayout="column" fxLayoutAlign="center start">
+    <div fxLayoutAlign="center center" fxLayout="column">
+      <div><img src="http://nymag.com/daily/entertainment/2009/01/06/images/20090106_aziz_190x190.jpg" alt="Trump the hump" class="contact-img"></div>
+      <div class="name"><h4>Petter Duuuus Berven</h4></div>
+      <div class="title">Assistant to the leder</div>
+      <div class="contact-info" fxLayoutAlign="center start" fxLayout="column">
+        <div class="mail">Mail: assist@bkits.no</div>
+        <div class="phone">Telefon: 123 45 678</div>
+      </div>
+    </div>
+  </div>
 </div>
+
+

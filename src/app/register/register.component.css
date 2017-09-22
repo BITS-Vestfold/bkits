@@ -45,16 +45,49 @@ form {
 
 .submit-btn {
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #017FD3;
   background: white;
   -webkit-transition: all ease 0.4s;
   -o-transition: all ease 0.4s;
   transition: all ease 0.4s;
+  color: #017FD3;
+
 }
 
 .submit-btn:hover {
   cursor: pointer;
-  border: 2px solid black;
-  background: black;
+  border: 2px solid #017FD3;
+  background: #017FD3;
   color: white;
 }
+
+
+.invalid-button:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.invalid-button {
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+

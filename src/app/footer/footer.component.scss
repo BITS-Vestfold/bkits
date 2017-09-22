@@ -1,0 +1,45 @@
+.footer-container {
+  width: 100%;
+  height: 250px;
+  background-color: rgb(24, 18, 23);
+
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+
+  img {
+    width: 100px;
+  }
+}
+
+.links {
+  padding: 20px;
+  width: 60%;
+}
+
+.link {
+  cursor: pointer;
+  outline: none;
+}
+
+.powered-by-header {
+  margin-top: 30px;
+}
+
+.powered-by {
+  padding-top: 20px;
+}
+
+.copyright {
+  margin-top: 5px;
+  font-size: 8px;
+}
