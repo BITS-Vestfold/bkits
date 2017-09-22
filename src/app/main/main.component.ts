@@ -40,7 +40,7 @@ export class MainComponent implements OnInit {
       });
       this.windowHalfX = window.screenX/2;
       this.windowHalfY = window.screenX/2;
-      let separation = 100, amountX = 50, amountY = 50,particles, particle;
+      let separation = 100, amountX = 50, amountY = 50,particles;
       this.camera = new this.THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
       this.camera.position.z = 100;
       this.scene = new this.THREE.Scene();
@@ -55,7 +55,7 @@ export class MainComponent implements OnInit {
       // particles
       let PI2 = Math.PI * 2;
       let material = new this.THREE.SpriteCanvasMaterial( {
-          color: 0xffffff,
+          color: 0x017FD3,
           program: function ( context ) {
               context.beginPath();
               context.arc( 0, 0, 0.5, 0, PI2, true );
@@ -64,18 +64,20 @@ export class MainComponent implements OnInit {
       } );
       let geometry = new this.THREE.Geometry();
       for ( var i = 0; i < 100; i ++ ) {
-          particle = new this.THREE.Sprite( material );
+          var particle = new this.THREE.Sprite( material );
           particle.position.x = Math.random() * 2 - 1;
           particle.position.y = Math.random() * 2 - 1;
           particle.position.z = Math.random() * 2 - 1;
           particle.position.normalize();
           particle.position.multiplyScalar( Math.random() * 10 + 450 );
-          particle.scale.x = particle.scale.y = 10;
-          //this.scene.add( particle );
+          particle.scale.x = 10;
+          particle.scale.y = 10;
+          particle.geometry = new this.THREE.CircleGeometry();
+          this.scene.add( particle );
           geometry.vertices.push( particle.position );
       }
       // lines
-      let line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.5 } ) );
+      let line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.3 } ) );
       this.scene.add( line );
 
       let timer = RX.Observable.timer(20,20);
