@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FacebookService, InitParams} from "ngx-facebook";
 
 @Component({
   selector: 'app-events',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FacebookService) {
+    const initParams: InitParams = {
+      appId: '709255365937283',
+      xfbml: true,
+      version: 'v2.8'
+    };
+
+    this.fb.init(initParams);
+  }
 
   ngOnInit() {
   }

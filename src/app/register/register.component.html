@@ -1,7 +1,9 @@
 <div fxLayoutAlign="center center" fxLayout="column" class="container">
 
   <form class="form" [formGroup]="registerForm" [ngClass]="{'rotate': onClick}">
-    <h1>BLI MEDLEM</h1>
+    <h1 style="text-align: center">BLI MEDLEM</h1>
+
+
     <div class="input-container" fxLayoutAlign="center center" fxLayout="column">
       <label class="label" for="firstname">Fornavn</label>
       <input class="input" id="firstname" placeholder="fornavn" formControlName="firstName">
@@ -19,14 +21,16 @@
 
     <div class="input-container" fxLayoutAlign="center center" fxLayout="column">
       <label class="label" for="phone-number">Nummer</label>
-      <input class="input" id="phone-number" type="number" placeholder="Mobil nummer" formControlName="number">
+      <input class="input" id="phone-number" type="number" placeholder="nummer" formControlName="number">
     </div>
 
     <div fxLayoutAlign="center center">
-      <button class="submit-btn" (click)="onClick = !onClick">REGISTRER</button>
+      <button class="submit-btn" (click)="onClick = !onClick"   [ngClass]=" {'invalid-button' :  !registerForm.valid}">BLI MEDLEM</button>
     </div>
   </form>
 
   DATA: {{registerForm.value | json}}
+  <br>
+  VALID:  {{registerForm.valid}}
 </div>
 

@@ -25,6 +25,7 @@ export class RegisterComponent implements OnInit {
       number: ['', [Validators.required]],
     });
 
+
   }
 
 
