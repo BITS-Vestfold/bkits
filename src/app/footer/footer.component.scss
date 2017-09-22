@@ -28,12 +28,18 @@ a {
 
 .link {
   cursor: pointer;
+  outline: none;
 }
 
 .powered-by-header {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .powered-by {
   padding-top: 20px;
+}
+
+.copyright {
+  margin-top: 5px;
+  font-size: 8px;
 }
