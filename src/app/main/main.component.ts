@@ -83,40 +83,6 @@ export class MainComponent implements OnInit {
         // lines
         let line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.3 } ) );
         this.scene.add( line );
-        //   var material = new this.THREE.SpriteCanvasMaterial( {
-        //       color: 0x000000,
-        //       program: function ( context ) {
-        //           context.beginPath();
-        //           context.arc( 0, 0, 0.5, 0, PI2, true );
-        //           context.fill();
-        //       }
-        //   } );
-        //   for ( var i = 0; i < 1000; i ++ ) {
-        //       let particle = new this.THREE.Sprite( material );
-        //       particle.position.x = Math.random() * 2 - 1;
-        //       particle.position.y = Math.random() * 2 - 1;
-        //       particle.position.z = Math.random() * 2 - 1;
-        //       particle.position.normalize();
-        //       particle.position.multiplyScalar( Math.random() * 10 + 450 );
-        //       particle.scale.multiplyScalar( 2 );
-        //       particle.geometry = new this.THREE.CircleGeometry();
-        //       this.scene.add( particle );
-        //   }
-        //   // lines
-        //   for (var i = 0; i < 300; i++) {
-        //       var geometry = new this.THREE.Geometry();
-        //       var vertex = new this.THREE.Vector3( Math.random() * 2 - 1, Math.random() * 2 - 1, Math.random() * 2 - 1 );
-        //       vertex.normalize();
-        //       vertex.multiplyScalar( 450 );
-        //       geometry.vertices.push( vertex );
-        //       var vertex2 = vertex.clone();
-        //       vertex2.multiplyScalar( Math.random() * 0.3 + 1 );
-        //       geometry.vertices.push( vertex2 );
-        //       var line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: Math.random() } ) );
-        //       this.scene.add( line );
-        //   }
-        //
-
         let timer = RX.Observable.timer(20,20);
         timer.subscribe(()=>{
             this.render();
@@ -125,7 +91,6 @@ export class MainComponent implements OnInit {
     render() {
         let mx = this.mouseX;
         let my = this.mouseY;
-        console.log("x:" + mx + " y:" + my)
         this.camera.position.x += ( mx*3 -500 - this.camera.position.x ) * .05;
         this.camera.position.y += ( - my + 200 - this.camera.position.y ) * .05;
         this.camera.lookAt( this.scene.position );
