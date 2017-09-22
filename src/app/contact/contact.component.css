@@ -5,38 +5,17 @@
 }
 
 
-.contact-container {
-  padding: 10px;
-}
-
-.contact-item {
-  padding: 10px;
-}
-
-.contact-img {
-  width: 100px;
-  -webkit-border-radius: 600px;
-  border-radius: 600px
-}
-
-
-.desc {
-  font-size: 14px !important;
-  font-style: italic;
-  margin-top: -10px;
-  color: #818181;
-}
-
-.name {
-  font-size: 16px;
-  margin-top: 5px;
-}
-
 .map-container {
-  height: 80%;
+  width: 80%;
+  height: 400px;
+  padding-left: 18%;
+
+  margin-top: 100px;
 }
 
 agm-map {
-  height: 100%;
+  height: inherit;
+  width: inherit;
+  padding-left: inherit;
 }
 
