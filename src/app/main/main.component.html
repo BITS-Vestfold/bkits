@@ -1,6 +1,6 @@
 <div class="container" fxLayoutAlign="center center" fxLayout="column">
-  <div class="main-content" fxLayoutAlign="center center">
 
+  <div class="main-content" fxLayoutAlign="center center">
     <div class="button-container" fxLayout="column" fxLayoutAlign="center center">
       <div class="logo">
         <img src="../../assets/bits_logo.svg" class="logo-img">
@@ -14,22 +14,40 @@
         BLI MEDLEM
       </div>
     </div>
+  </div>
+
+  <div class="second-page" fxLayout="column" fxLayoutAlign="start center">
+    <div class="face-header" fxLayout="row" fxLayoutAlign="center center">
+      <div><h1>Følg oss på facebook</h1></div>
+      <div><img src="https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/01-512.png" alt=""></div>
+    </div>
+
+    <div class="face-ad-container" fxLayoutAlign="start start" fxLayout="column">
+      <div class="face-ad-1" fxLayout="row">
+        <div><img src="https://static1.squarespace.com/static/551c31f2e4b002dbe1ff7cae/58d3efb78419c2d3806deef5/58d3efb7e6f2e19c40b23b53/1490284472548/BirthdayParty09.jpg?format=1000w" alt="party"></div>
+        <div><h3>..og få med deg hva som skjer</h3></div>
+      </div>
+
+      <div class="face-ad-2" fxLayout="row" fxLayoutAlign="end start">
+        <div><h3>..hvem som holder neste foredrag</h3></div>
+        <div><img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAgDAAAAJGNkNTZhZmU0LTczZTctNGUwMC05MzJjLWVlZTI4ZWMwMDQ1Yw.jpg" alt=""></div>
+      </div>
+    </div>
 
   </div>
 
-  <div class="secondary-content" fxLayout="row" fxLayoutAlign="center center">
+  <div class="third-page" fxLayout="row" fxLayoutAlign="center center">
     <div class="sponsors" fxLayout="column" fxLayoutAlign="start center">
 
       <div class="sponsor-header"><h1>Våre stolte sponsorer!</h1></div>
       <div class="sponsor-logos"  fxLayoutAlign="center center" fxLayoutWrap>
         <div *ngFor="let sponsor of sponsorImgs" class="sponsor" fxLayoutAlign="center center">
-
           <img src="{{sponsor.imgSrc}}" alt="{{sponsor.name}}">
-
         </div>
       </div>
     </div>
-    <div class="facebook-container" fxFlex="3 3 100%">
+
+    <!--<div class="facebook-container" fxFlex="3 3 100%">
       <fb-page
         href="https://www.facebook.com/itstudenter"
         [height]="500"
@@ -37,7 +55,7 @@
         [smallHeader]="true"
         tabs="timeline">
       </fb-page>
-    </div>
+    </div>-->
   </div>
 
 </div>
