@@ -17,6 +17,8 @@ import { HeaderComponent } from './header/header.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { FacebookPageComponent } from './main/facebook-page/facebook-page.component';
+import { SponsorPageComponent } from './main/sponsor-page/sponsor-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     HeaderComponent,
     AboutUsComponent,
-    FooterComponent
+    FooterComponent,
+    FacebookPageComponent,
+    SponsorPageComponent
   ],
   imports: [
     BrowserModule,
