@@ -1,5 +1,6 @@
-import { Component,Renderer2,ElementRef,ViewChild, OnInit ,AfterContentInit} from '@angular/core';
+import { Component,Renderer2,NgZone,ElementRef,ViewChild, OnInit} from '@angular/core';
 import * as THREElib from 'three-js';
+import * as RX from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -26,7 +27,7 @@ export class MainComponent implements OnInit {
   camera: any;
   scene: any;
   renderer: any;
-  constructor(private rend: Renderer2) {
+  constructor(private rend: Renderer2,private ngZone: NgZone) {
 
   }
 
@@ -36,7 +37,6 @@ export class MainComponent implements OnInit {
       this.rend.listen('body','mousemove',e => {
           this.mouseX = e.clientX - window.screenX/2;
           this.mouseY = e.clientY - window.screenY/2;
-          this.render();
       });
       this.windowHalfX = window.screenX/2;
       this.windowHalfY = window.screenX/2;
@@ -77,14 +77,11 @@ export class MainComponent implements OnInit {
       // lines
       let line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.5 } ) );
       this.scene.add( line );
-  }
-  ngAfterContentInit()
-  {
 
-  }
-  animate() {
-      requestAnimationFrame( this.animate );
-      this.render();
+      let timer = RX.Observable.timer(20,20);
+      timer.subscribe(()=>{
+          this.render();
+      });
   }
   render() {
       this.camera.position.x += ( this.mouseX - this.camera.position.x ) * .05;
