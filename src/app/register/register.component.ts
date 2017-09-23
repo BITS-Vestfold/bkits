@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,6 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.createForm();
-
   }
 
   createForm() {
@@ -24,10 +23,5 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       number: ['', [Validators.required]],
     });
-
-
   }
-
-
-
 }

@@ -12,9 +12,9 @@ import { EventsComponent } from './events/events.component';
 import { RegisterComponent } from './register/register.component';
 
 import { AgmCoreModule } from '@agm/core';
-import {ContactComponent} from "./contact/contact.component";
+import {ContactComponent} from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { FacebookPageComponent } from './main/facebook-page/facebook-page.component';
