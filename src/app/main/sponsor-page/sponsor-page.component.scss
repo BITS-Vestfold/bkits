@@ -1,6 +1,5 @@
 .third-page {
   width: 100%;
-  height: 100vh;
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
@@ -16,7 +15,7 @@
 
 .sponsors {
   width: 100%;
-  height: 100vh;
+  padding-bottom: 100px;
 }
 
 
@@ -30,4 +29,10 @@
 .sponsor {
   width: 50%;
   padding: 50px;
+}
+
+@media screen and (max-width: 700px){
+  .sponsor-logos {
+    flex-direction: column!important;
+  }
 }
