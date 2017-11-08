@@ -27,7 +27,6 @@ export class MainComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(window.innerWidth + " " + window.innerHeight)
         this.THREE = THREElib(["Projector","CanvasRenderer"]);
         this.rend.listen('body','mousemove',e => {
         let wd = window.screen.width;
@@ -55,6 +54,7 @@ export class MainComponent implements OnInit {
         this.renderer.domElement.style.width="100%";
         this.renderer.domElement.style.height="100%";
         this.renderer.domElement.style.position="absolute";
+		this.renderer.domElement.style.bottom= "0";
         this.mainContent.nativeElement.appendChild( this.renderer.domElement );
         // particles
         let PI2 = Math.PI * 2;
