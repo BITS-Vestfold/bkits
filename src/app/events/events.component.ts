@@ -9,6 +9,10 @@ import {FacebookService, InitParams} from "ngx-facebook";
 export class EventsComponent implements OnInit {
 
   constructor(private fb: FacebookService) {
+
+  }
+
+  ngOnInit() {
     const initParams: InitParams = {
       appId: '709255365937283',
       xfbml: true,
@@ -16,9 +20,6 @@ export class EventsComponent implements OnInit {
     };
 
     this.fb.init(initParams);
-  }
-
-  ngOnInit() {
   }
 
 }
