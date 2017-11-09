@@ -18,6 +18,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { FacebookPageComponent } from './main/facebook-page/facebook-page.component';
 import { SponsorPageComponent } from './main/sponsor-page/sponsor-page.component';
+import { MatIconModule} from '@angular/material';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,12 @@ import { SponsorPageComponent } from './main/sponsor-page/sponsor-page.component
     AboutUsComponent,
     FooterComponent,
     FacebookPageComponent,
-    SponsorPageComponent
+    SponsorPageComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
     FlexLayoutModule,
     FacebookModule.forRoot(),
     BrowserAnimationsModule,

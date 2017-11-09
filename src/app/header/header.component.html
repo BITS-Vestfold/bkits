@@ -1,8 +1,14 @@
-<div class="header" fxLayoutAlign="start center">
+<div class="header" fxLayoutAlign="start center" fxLayoutAlign.lt-md="space-between center">
+
   <div class="logo" routerLink="main">
     <img src="../../assets/bits_logo_trans.svg" class="logo-img">
   </div>
-  <div fxLayoutAlign="end center" class="links-container">
+
+  <div style="margin-right: 20px" fxLayoutAlign="center center" (click)="sidenav.toggle()" fxHide.gt-xs>
+    <mat-icon>menu</mat-icon>
+  </div>
+
+  <div fxLayoutAlign="end center" class="links-container" fxHide.lt-sm>
     <div class="link" routerLink="main" routerLinkActive="active">HJEM</div>
    <!-- <div class="link" routerLink="bli-medlem"  routerLinkActive="active">BLI MEDLEM</div>-->
     <div class="link" routerLink="kontakt"  routerLinkActive="active">KONTAKT</div>
@@ -10,3 +16,4 @@
     <div class="link" routerLink="events"  routerLinkActive="active">EVENTS</div>
   </div>
 </div>
+
