@@ -1,6 +1,7 @@
-import { Component,Renderer2,NgZone,ElementRef,ViewChild, OnInit} from '@angular/core';
+import { Component, Renderer2, NgZone, ElementRef, ViewChild, OnInit} from '@angular/core';
 import * as THREElib from 'three-js';
-import * as RX from 'rxjs';
+import {Observable} from "rxjs/Observable";
+import {TimerObservable} from "rxjs/observable/TimerObservable";
 
 @Component({
     selector: 'app-main',
@@ -22,7 +23,7 @@ export class MainComponent implements OnInit {
     camera: any;
     scene: any;
     renderer: any;
-    constructor(private rend: Renderer2,private ngZone: NgZone) {
+    constructor(private rend: Renderer2) {
 
     }
 
@@ -83,7 +84,8 @@ export class MainComponent implements OnInit {
         // lines
         let line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.3 } ) );
         this.scene.add( line );
-        let timer = RX.Observable.timer(20,20);
+
+        let timer = TimerObservable.create(20,20);
         timer.subscribe(()=>{
             this.render();
         });
@@ -96,5 +98,5 @@ export class MainComponent implements OnInit {
         this.camera.lookAt( this.scene.position );
         this.renderer.render( this.scene, this.camera );
     }
-
 }
+
