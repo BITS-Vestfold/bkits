@@ -1,35 +1,19 @@
-<div class="container" fxLayoutAlign="center center">
+<div class="card" style.lt-sm="padding: 10px">
+  <div id="about-content">
+  <h2>Bits: Bakkenteigen IT Studenter</h2>
+  <a> Er linjeforenigen for
+      <ul>
+        <li>Datateknikk</li>
+        <li>IT og informasjonssystemer</li>
+      </ul>
+      ved HSN campus Vestfold.
+       <p>Vi jobber for å fremme det sosiale of faglige miljøet ved skolen.</p>
+       <p>Vi ble stiftet 15.02.2017.</p>
 
-  <div class="leaders" fxLayout="column" fxLayoutAlign="center end">
-    <div fxLayoutAlign="center center" fxLayout="column">
-      <div><img src="../assets/petter.jpg" alt="petter.jpg" class="contact-img"></div>
-      <div class="name"><h4>Petter Duuuus Berven</h4></div>
-      <div class="title">Styrets leder</div>
-      <div class="contact-info" fxLayoutAlign="center start" fxLayout="column">
-        <div class="mail">Mail: leder@bkits.no</div>
-        <div class="phone">Telefon: 123 45 678</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="members" fxLayoutAlign="center center" fxLayout="column">
-    <div><h3>Styrets øvrige medlemmer:</h3></div>
-    <div *ngFor="let member of members" class="member">
-      {{member.name}}, født {{member.dateOfBirth}}
-    </div>
-  </div>
-
-  <div class="leaders" fxLayout="column" fxLayoutAlign="center start">
-    <div fxLayoutAlign="center center" fxLayout="column">
-      <div><img src="../assets/sarushan.jpg" alt="sarushan.jpg" class="contact-img"></div>
-      <div class="name"><h4>Sarushan Vamathevan</h4></div>
-      <div class="title">Assistant to the leder</div>
-      <div class="contact-info" fxLayoutAlign="center start" fxLayout="column">
-        <div class="mail">Mail: assist@bkits.no</div>
-        <div class="phone">Telefon: 123 45 678</div>
-      </div>
-    </div>
-  </div>
+  </a>
 </div>
-
-
+<div class="map-container">
+    <agm-map [latitude]="59.368792" [longitude]="10.442151" [zoom]="17">
+      <agm-marker [latitude]="59.368792" [longitude]="10.442151"></agm-marker>
+    </agm-map>
+</div>
