@@ -8,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   members: any[] = [
-    {name: 'Odin Van der Hultgren Horst', dateOfBirth: '11.07.1992'},
-    {name: 'Even Flem Hagen', dateOfBirth: '03.07.1992'},
-    {name: 'Lars Ådne Heimdal', dateOfBirth: '03.07.1992'},
-    {name: 'Peter Gustad', dateOfBirth: '03.07.1992'},
+
+    {name: 'Sarushan Vamathevan', dateOfBirth: '03.07.1992'},
+    {name: 'Petter Duuuus Berven', dateOfBirth: '03.07.1992'},
   ];
 
   constructor() { }
