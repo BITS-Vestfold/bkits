@@ -10,7 +10,7 @@ export class ContactComponent implements OnInit {
   members: any[] = [
 
     {name: 'Sarushan Vamathevan', dateOfBirth: '03.07.1992'},
-    {name: 'Petter Duuuus Berven', dateOfBirth: '03.07.1992'},
+    {name: 'Petter Duuuus Berven', dateOfBirth: '03.04.1995'},
   ];
 
   constructor() { }
