@@ -9,7 +9,7 @@ export class SponsorPageComponent implements OnInit {
 
   sponsorImgs : any[] = [
     {name: 'Syse', imgSrc: 'https://www.syse.no/assets/SYSE_logo_darkText_300x113.png'},
-    {name: 'Insigno', imgSrc: '../assets/insigno_logo_dark.svg'}
+    {name: 'Insigno', imgSrc: '../assets/insigno-logo.png'}
   ];
 
   constructor() { }
