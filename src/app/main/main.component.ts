@@ -1,7 +1,6 @@
 import { Component, Renderer2, NgZone, ElementRef, ViewChild, OnInit} from '@angular/core';
 import * as THREElib from 'three-js';
-import {Observable} from "rxjs/Observable";
-import {TimerObservable} from "rxjs/observable/TimerObservable";
+import {TimerObservable} from 'rxjs-compat/observable/TimerObservable';
 
 @Component({
     selector: 'app-main',
@@ -11,14 +10,14 @@ import {TimerObservable} from "rxjs/observable/TimerObservable";
 export class MainComponent implements OnInit {
 
 
-    @ViewChild("mainContent") mainContent: ElementRef;
+    @ViewChild('mainContent') mainContent: ElementRef;
     THREE: any;
-    mouseX = 100;
+    mouseX = 0;
     mouseY = 100;
-    windowHalfX = window.screenX/2;
-    windowHalfY =  window.screenY/2;
+    windowHalfX = window.screenX / 2;
+    windowHalfY =  window.screenY / 2;
     SEPARATION = 800;
-    AMOUNTX = 100;
+    AMOUNTX = 0;
     AMOUNTY = 100;
     camera: any;
     scene: any;
@@ -28,7 +27,7 @@ export class MainComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.THREE = THREElib(["Projector","CanvasRenderer"]);
+        this.THREE = THREElib(['Projector','CanvasRenderer']);
         this.rend.listen('body','mousemove',e => {
         let wd = window.screen.width;
         if(e.clientX > wd/2)
@@ -42,9 +41,9 @@ export class MainComponent implements OnInit {
                     console.log(window.screen.width);
             this.mouseY = e.clientY - window.screenY;
         });
-        this.windowHalfX = window.screenX/2;
+        this.windowHalfX = window.screenX/ 2;
         this.windowHalfY = window.screenX/2;
-        let separation = 1000, amountX = 100, amountY = 100,particles;
+        let separation = 100, amountX = 100, amountY = 100,particles;
         this.camera = new this.THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
         this.camera.position.z = 100;
         this.scene = new this.THREE.Scene();
@@ -52,10 +51,10 @@ export class MainComponent implements OnInit {
         this.renderer.setPixelRatio( window.devicePixelRatio );
         this.renderer.setSize(window.innerWidth,window.innerHeight-80);
         this.renderer.setClearColorHex(0xffffff,1);
-        this.renderer.domElement.style.width="100%";
-        this.renderer.domElement.style.height="100%";
-        this.renderer.domElement.style.position="absolute";
-		this.renderer.domElement.style.bottom= "0";
+        this.renderer.domElement.style.width='100%';
+        this.renderer.domElement.style.height='100%';
+        this.renderer.domElement.style.position='absolute';
+		this.renderer.domElement.style.bottom= '0';
         this.mainContent.nativeElement.appendChild( this.renderer.domElement );
         // particles
         let PI2 = Math.PI * 2;
@@ -68,7 +67,7 @@ export class MainComponent implements OnInit {
             }
         } );
         let geometry = new this.THREE.Geometry();
-        for ( var i = 0; i < 150; i ++ ) {
+        for ( let i = 0; i < 150; i ++ ) {
             var particle = new this.THREE.Sprite( material );
             particle.position.x = Math.random() * 2 - 1;
             particle.position.y = Math.random() * 2 - 1;
@@ -82,18 +81,18 @@ export class MainComponent implements OnInit {
             geometry.vertices.push( particle.position );
         }
         // lines
-        let line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.3 } ) );
+        const line = new this.THREE.Line( geometry, new this.THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.3 } ) );
         this.scene.add( line );
 
-        let timer = TimerObservable.create(20,20);
+        const timer = TimerObservable.create(20, 20);
         timer.subscribe(()=>{
             this.render();
         });
     }
     render() {
-        let mx = this.mouseX;
-        let my = this.mouseY;
-        this.camera.position.x += ( mx*3 -500 - this.camera.position.x ) * .05;
+        const mx = this.mouseX;
+        const my = this.mouseY;
+        this.camera.position.x += ( mx*3 - 500 - this.camera.position.x ) * .05;
         this.camera.position.y += ( - my + 200 - this.camera.position.y ) * .05;
         this.camera.lookAt( this.scene.position );
         this.renderer.render( this.scene, this.camera );
